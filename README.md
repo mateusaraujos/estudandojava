@@ -1,2 +1,2 @@
-# estudando java
- Meus programas feitos com a linguagem de programação java
+# Estudando Java
+ Diretório criado para os meus estudos com a linguagem java.
