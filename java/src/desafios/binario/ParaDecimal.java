@@ -9,7 +9,7 @@ public class ParaDecimal {
         char[] array = teclado.nextLine().toCharArray();
 
         System.out.println(
-            "Ainda não sei!";
+            "Ainda não sei!"
         );
     }
 }
