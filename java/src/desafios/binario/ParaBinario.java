@@ -19,6 +19,6 @@ public class ParaBinario {
             }
         }
         
-        System.out.println("O número " + guardado + " equivale ao número binário " + binario + ".");
+        System.out.println("O número decimal " + guardado + " equivale ao número binário " + binario + ".");
     }
 }
