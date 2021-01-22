@@ -6,8 +6,8 @@ public class ParaBinario {
 
     public static void decimalBinario() {
         System.out.print("Digite um número decimal para converter em Número Binário: ");
-        int decimal = teclado.nextInt();
-        int guardado = decimal;
+        long decimal = teclado.nextLong();
+        long guardado = decimal;
 
         String binario = "";
         if (decimal == 0) {
