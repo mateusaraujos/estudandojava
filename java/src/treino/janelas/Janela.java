@@ -29,7 +29,7 @@ public class Janela {
         // ACIMA - Fazer a aplicação terminar quando eu fechar a janela com a constante EXIT_ON_CLOSE.
 
         // ABAIXO - Antes de deixar a janela visível.
-        // ADICIONO O PAINEL NA JANELA, E DEPOIS ADICIONO OS COMPONENTES DENTRO DO PAINEL.
+        // ADICIONO O PAINEL NA JANELA/FRAME, E DEPOIS ADICIONO OS COMPONENTES DENTRO DO PAINEL.
         JPanel p = new JPanel();
 
         // ABAIXO - Começando a adicionar componentes ao Panel.
