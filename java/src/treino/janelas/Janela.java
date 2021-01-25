@@ -39,6 +39,7 @@ public class Janela {
 
         // ABAIXO - Criando uma caixa de texto para escrever o nome.
         JTextField t = new JTextField(); 
+        // t.setText("Alguma coisa padrão");
         t.setColumns(10); // 10 é o número de colunas.
         p.add(t);
 
