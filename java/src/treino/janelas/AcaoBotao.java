@@ -28,6 +28,7 @@ public class AcaoBotao implements ActionListener {
     // Quando eu implemento a interface ActionListener, sou obrigado a implementar o método actionPerformed().
     @Override
     public void actionPerformed(ActionEvent e) {
+        // **e** - Event Object
         // O próprio swing vai invocar esse método.
         // Com o ActionEvent temos acesso ao componente que disparou o evento.
         // 0000000000 Antes de tudo, temos que REGISTRAR O LISTENER no botão que criamos para avisar ao java quem está ouvidno o evento do botão.
