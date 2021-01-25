@@ -4,6 +4,11 @@ import javax.swing.*;
 
 public class Janela extends JFrame {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     public Janela() {
         setTitle("Minha Aplicação");
         setSize(600, 300);
