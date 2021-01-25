@@ -38,7 +38,8 @@ public class Janela {
         p.add(l); // AO LADO - Adicionei o componente que acabei de fazer ao Panel.
 
         // ABAIXO - Criando uma caixa de texto para escrever o nome.
-        JTextField t = new JTextField(10); // 10 é o número de colunas.
+        JTextField t = new JTextField(); 
+        t.setColumns(10); // 10 é o número de colunas.
         p.add(t);
 
         // ABAIXO - Criando um botão.
