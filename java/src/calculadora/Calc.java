@@ -14,6 +14,7 @@ public class Calc extends JFrame {
         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 
         setSize(400, 400); //l, a
+        setResizable(false); // A Janela não pode ser redimensionada.
         setLocation(800, 100);
 
         setLayout(new BorderLayout());
