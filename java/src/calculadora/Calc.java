@@ -1,5 +1,7 @@
 package calculadora;
 
+import java.awt.BorderLayout;
+
 import javax.swing.*;
 
 public class Calc extends JFrame {
@@ -13,6 +15,19 @@ public class Calc extends JFrame {
 
         setSize(400, 400); //l, a
         setLocation(800, 100);
+
+        setLayout(new BorderLayout());
+
+        PainelTexto painelTexto = new PainelTexto();
+        add(BorderLayout.NORTH, painelTexto);
+
+        JPanel painelDigitos = new JPanel();
+        painelDigitos.setLayout(new BorderLayout());
+        painelDigitos.add(BorderLayout.CENTER, new PainelNumeros(painelTexto.getTxtNumber()));
+
+        painelDigitos.add(BorderLayout.EAST, new PainelOperacoes(painelTexto.getTxtNumber()));
+
+        add(BorderLayout.CENTER, painelDigitos);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
