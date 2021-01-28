@@ -12,7 +12,7 @@ public class Animal {
     double peso;
     public Animal(String raca, double peso) {
         // super(); já é escrito aqui, por causa da classe pai Object
-        super(); // Serve para referenciar a super classe.
+        // Serve para referenciar a super classe.
         this.raca = raca;
         this.peso = peso;
     }
@@ -28,7 +28,7 @@ public class Animal {
      */
 
     public static void main(String[] args) {
-        Animal teste = new Animal();
+        Animal teste = new Animal("pitbull", 22);
     }
     
 }
