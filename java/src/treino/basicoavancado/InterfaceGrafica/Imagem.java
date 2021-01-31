@@ -1,6 +1,5 @@
 package treino.basicoavancado.InterfaceGrafica;
 
-import java.awt.*;
 import javax.swing.*;
 
 public class Imagem extends JFrame {
