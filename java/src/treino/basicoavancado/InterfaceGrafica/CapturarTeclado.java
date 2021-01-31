@@ -13,6 +13,14 @@ public class CapturarTeclado extends JFrame {
                     System.out.println("Me chame de Mateus");
                 }
                 // Vai capturar a tecla 'M' e fazer algo
+
+                int codigo = e.getKeyCode(); // Retorna o código da tecla pressionada
+                int tecla = KeyEvent.VK_ENTER; // Código da tecla que vou pressionada
+
+                // Comparando os dois
+                if (codigo == tecla) {
+                    System.out.println("Tecla ENTER com o código " + codigo);
+                }
             }
         });
 
