@@ -13,10 +13,12 @@ public class Simultaneo extends JFrame {
     public Simultaneo() {
         editarLayout();
         // new contarTempo().start(); --> start() vai iniciar o método run() da classe Thread de forma simultânea
-        ContarTempo obj = new ContarTempo();
-        obj.start();
+        ContarTempo thread = new ContarTempo();
+        thread.start();
         mostrarMensagem(); // Será simultâneo
-        obj.stop(); // Tá depreciado
+        //thread.stop(); depreciado
+        thread.feito = true; // Para o Thread.run() (Forma correta!!!)
+        JOptionPane.showMessageDialog(null, "Você gastou " + segundos + " segundos para responder!");
     }
 
     public void editarLayout() {
@@ -54,16 +56,21 @@ public class Simultaneo extends JFrame {
         int anoAtual = Integer.parseInt(JOptionPane.showInputDialog("Em que ano estamos?"));
         int resultado = anoAtual - anoNasc;
         idade.setText("Você tem " + resultado + " anos");
-        JOptionPane.showMessageDialog(null, "Você gastou " + segundos + " segundos para responder!");
     }
 
     // O Thread pode ser executado de forma simultânea
     public class ContarTempo extends Thread {
+        boolean feito = false; // Forma correta de parar
         public void run() {
             while (true) {
-                try { Thread.sleep(1000); } catch (Exception erro) {}
-                segundos++;
-                tempo.setText(segundos + "");
+                if (feito) { // Dentro do while, forma correta de parar
+                    tempo.setText(--segundos + "");
+                    return;
+                } else {
+                    try { Thread.sleep(1000); } catch (Exception erro) {}
+                    ++segundos;
+                    tempo.setText(segundos + "");
+                }
             }
         }
     }
