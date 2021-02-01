@@ -1,4 +1,4 @@
-//Ler aquivo.txt
+//Ler aquivo.txt ou qualquer ou outro arquivo que contenha texto
 package treino.basicoavancado.biblioteca;
 
 import javax.swing.*;
