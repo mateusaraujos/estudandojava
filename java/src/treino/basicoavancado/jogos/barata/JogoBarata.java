@@ -34,9 +34,9 @@ public class JogoBarata extends JFrame {
         boolean feito = false;
         public void run() {
             while (true) {
-                if (lContandoTempo.getText() == 0 + "") {
-                    System.runFinalization();
+                if (segundos == 0) {
                     feito = true;
+                    JOptionPane.showMessageDialog(null, "Você fez " + conta + " pontos.");
                     return;
                 } else {
                     try {Thread.sleep(1000);} catch (Exception erro) {} ;
