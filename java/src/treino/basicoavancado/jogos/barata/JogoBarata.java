@@ -55,7 +55,20 @@ public class JogoBarata extends JFrame {
 			lContando.setText(conta + "");
 			segundos = 20;
 			lContandoTempo.setText(segundos + "");
-			continuar();
+            Tempo thread = new Tempo();
+            thread.start();
+            feitoInfinito = false;
+            while (true) {
+                if (feitoInfinito) {
+                    return;
+                } else {
+                    try { Thread.sleep(850); } catch (Exception erro) {}
+                    lBarata.setIcon(iconBarata);
+                    x = (int) (Math.random() * 620);
+                    y = (int) (Math.random() * 520);
+                    lBarata.setBounds(x, y, 321, 304);
+                }
+            }
 		} else if (op == 1) {
 			System.exit(0);
 		} else {
@@ -75,17 +88,17 @@ public class JogoBarata extends JFrame {
                 	case 0:
                 		JOptionPane.showMessageDialog(null, "Treine mais!");
                 		feitoInfinito = true;
-                		escolha();
+                        escolha();
                 		break;
                 	case 1:
                 		JOptionPane.showMessageDialog(null, "Você fez 1 ponto.");
                 		feitoInfinito = true;
-                		escolha();
+                        escolha();
                 		break;
                 	default:
                 		JOptionPane.showMessageDialog(null, "Parabéns, você fez " + conta + " pontos.");
                 		feitoInfinito = true;
-                		escolha();
+                        escolha();
                 	}
                     return;
                 } else {
@@ -132,7 +145,7 @@ public class JogoBarata extends JFrame {
         	if (feitoInfinito) {
         		return;
         	} else {
-        		try { Thread.sleep(1000); } catch (Exception erro) {}
+        		try { Thread.sleep(850); } catch (Exception erro) {}
         		lBarata.setIcon(iconBarata);
         		x = (int) (Math.random() * 620);
         		y = (int) (Math.random() * 520);
