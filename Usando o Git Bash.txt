@@ -8,6 +8,6 @@ git status -> Verifica se está tudo certo. Vai mostrar se tiver alguma pasta no
 
 git add . -> Adiciona todos os arquivos ao controle de versão local. Falta o COMMIT.
 
-git commit -m "Mensagem do commit aqui." -> Faz o commit local. Falta o PUSH para enviar o GitHub.
+git commit -m "Mensagem do commit aqui." -> Faz o commit local. Falta o PUSH para enviar ao GitHub.
 
 git push origin main -> Envia todos os commits locais para a nuvem.
